@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="bangal_border_width" format="dimension" />
+        <attr name="bangal_border_color" format="color" />
+        <attr name="bangal_border_overlay" format="boolean" />
+        <attr name="bangal_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <attr name="linkModes">
+        <flag name="hashtag" value="1"/>
+        <flag name="mention" value="2"/>
+        <flag name="phone" value="4"/>
+        <flag name="email" value="8"/>
+        <flag name="url" value="16"/>
+    </attr>
+
+    <declare-styleable name="SocialTextView">
+        <attr name="android:text"/>
+        <attr name="android:hint"/>
+        <attr name="underlineEnabled" format="boolean"/>
+        <attr name="hashtagColor" format="color"/>
+        <attr name="mentionColor" format="color"/>
+        <attr name="phoneColor" format="color"/>
+        <attr name="emailColor" format="color"/>
+        <attr name="urlColor" format="color"/>
+        <attr name="selectedColor" format="color"/>
+        <attr name="linkModes"/>
+    </declare-styleable>
+
+    <declare-styleable name="VoicePlayerView">
+        <attr name="viewBackground" format="color" />
+        <attr name="playPauseBackgroundColor" format="color" />
+        <attr name="shareBackgroundColor" format="color" />
+        <attr name="seekBarProgressColor" format="color" />
+        <attr name="seekBarThumbColor" format="color" />
+        <attr name="progressTimeColor" format="color" />
+        <attr name="showShareButton" format="boolean" />
+        <attr name="showTiming" format="boolean" />
+        <attr name="viewCornerRadius" format="float" />
+        <attr name="playPauseCornerRadius" format="float" />
+        <attr name="shareCornerRadius" format="float" />
+        <attr name="shareText" format="string" />
+        <attr name="enableVisualizer" format="boolean" />
+        <attr name="timingBackgroundColor" format="color" />
+        <attr name="visualizationPlayedColor" format="color" />
+        <attr name="visualizationNotPlayedColor" format="color" />
+        <attr name="playProgressbarColor" format="color" />
+
+    </declare-styleable>
+
+    <declare-styleable name="URLEmbeddedView">
+        <attr name="title" format="string" />
+        <attr name="description" format="string" />
+        <attr name="host" format="string" />
+        <attr name="favor" format="reference" />
+        <attr name="thumbnail" format="reference" />
+    </declare-styleable>
+</resources>

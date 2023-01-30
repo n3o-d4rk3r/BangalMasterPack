@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Social TextView</string>
+    <string name="share">Share Voice File</string>
+        <string name="uev_title">Title</string>
+    <string name="uev_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="uev_host">https://github.com/n3o-d4rk3r</string>
+</resources>
