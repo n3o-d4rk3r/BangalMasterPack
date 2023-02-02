@@ -48,4 +48,16 @@
         android:layout_marginBottom="16dp"
         app:cvb_recording_color="#D438A2"/>
 
+    <Button
+        android:id="@+id/facebook_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Facebook" />
+
 </RelativeLayout>
