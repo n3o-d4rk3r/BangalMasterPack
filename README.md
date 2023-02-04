@@ -36,7 +36,7 @@
   <p dir="auto">Step 1. Add it in your root <b>settings.gradle</b> at the end of repositories:</p>
 <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>
  dependencies {
-	        implementation 'com.github.n3o-d4rk3r:BangalMasterPack:1.3'
+	        implementation 'com.github.n3o-d4rk3r:BangalMasterPack:1.2'
 	}
 </code></pre><div class="zeroclipboard-container position-absolute right-0 top-0">
     <clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay" data-copy-feedback="Copied!" data-tooltip-direction="w" value="implementation 'com.github.n3o-d4rk3r:BangalMasterPack:1.3'" tabindex="0" role="button">
