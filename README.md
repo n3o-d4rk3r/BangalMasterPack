@@ -1,4 +1,4 @@
-# BangalMasterPack - Audio Player, CircleImageView, URL Embedded, SocialTexView
+# BangalMasterPack - Audio Player, CircleImageView, URL Embedded, SocialTexView, SocialEditText
 
 ### Features:
 <ul dir="auto">
