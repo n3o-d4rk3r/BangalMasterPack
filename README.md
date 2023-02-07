@@ -18,6 +18,7 @@
 		maven { url 'https://jitpack.io' }
 	}
 }
+
 </code></pre><div class="zeroclipboard-container position-absolute right-0 top-0">
     <clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay" data-copy-feedback="Copied!" data-tooltip-direction="w" value="allprojects {
 	repositories {
