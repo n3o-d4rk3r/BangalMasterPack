@@ -35,9 +35,5 @@ class VideoActivity : AppCompatActivity() {
             }
 
         }
-
-        Handler().postDelayed(Runnable {
-            videoRecordButton.cancelRecording()
-        }, 5000)
     }
 }

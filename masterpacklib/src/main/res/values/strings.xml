@@ -5,4 +5,6 @@
         <string name="uev_title">Title</string>
     <string name="uev_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
     <string name="uev_host">https://github.com/n3o-d4rk3r</string>
+
+    <string name="mention">Mention</string>
 </resources>
