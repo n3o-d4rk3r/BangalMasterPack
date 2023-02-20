@@ -38,6 +38,8 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.15.3'
     implementation 'com.squareup.picasso:picasso:2.8'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation project(path: ':socialviewcommons')
+    implementation project(path: ':socialviewcore')
 }
 afterEvaluate {
     publishing {
