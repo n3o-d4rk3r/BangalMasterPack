@@ -15,5 +15,3 @@ dependencyResolutionManagement {
 rootProject.name = "BangalMasterPack"
 include ':app'
 include ':masterpacklib'
-include ':socialviewcommons'
-include ':socialviewcore'
