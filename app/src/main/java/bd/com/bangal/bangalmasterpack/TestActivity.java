@@ -6,8 +6,11 @@ import android.os.Bundle;
 
 import bd.com.bangal.masterpacklib.ReactionPopup;
 import bd.com.bangal.masterpacklib.ReactionsConfigBuilder;
+import bd.com.bangal.socialviewcore.widget.SocialEditText;
 
 public class TestActivity extends AppCompatActivity {
+
+    SocialEditText bg_text,postText;
 
     private final String[] strings = {"wow"};
 
