@@ -60,4 +60,11 @@
         android:gravity="center"
         android:text="Facebook" />
 
+    <bd.com.bangal.masterpacklib.slidetoact.SlideToActView
+        android:id="@+id/example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/facebook_btn"
+        app:text="Example" />
+
 </RelativeLayout>

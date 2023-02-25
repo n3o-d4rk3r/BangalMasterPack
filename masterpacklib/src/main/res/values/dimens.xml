@@ -6,4 +6,8 @@
     <dimen name="reactions_text_horizontal_padding">12dp</dimen>
     <dimen name="reactions_text_vertical_padding">4dp</dimen>
     <dimen name="reactions_text_size">8sp</dimen>
+
+    <dimen name="slidetoact_default_area_margin">8dp</dimen>
+    <dimen name="slidetoact_default_icon_margin">16dp</dimen>
+    <dimen name="slidetoact_default_text_size">16sp</dimen>
 </resources>
