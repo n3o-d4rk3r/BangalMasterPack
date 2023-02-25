@@ -8,6 +8,7 @@
 <li>CircleImageView</li>
 <li>URL Embedded</li>
 <li>SocialTexView</li>
+<li>SLide Anim like bKash, Nagat tk section</li>
 <li>The controls are availabe in XML and programmatically</li>
 </ul>
 
