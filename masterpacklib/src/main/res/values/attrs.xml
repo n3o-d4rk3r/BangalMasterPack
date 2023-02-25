@@ -87,4 +87,15 @@
           <enum name="mirror" value="2" />
         </attr>
     </declare-styleable>
+
+
+    <attr name="attr_primaryTextColor" format="reference|color" />
+    <attr name="attr_accentColor" format="reference|color" />
+
+    <declare-styleable name="DropDownList">
+        <attr name="attr_primaryTextColor" />
+        <attr name="attr_accentColor" />
+        <attr name="attr_showAllExpanded" format="boolean"/>
+        <attr name="attr_keepSpaceIfEmpty" format="boolean"/>
+    </declare-styleable>
 </resources>
