@@ -1,4 +1,4 @@
-# BangalMasterPack- Audio Player, CircleImageView, URL Embedded, SocialTexView, SocialEditText
+# BangalMasterPack-Audio Player, CircleImageView, URL Embedded, SocialTexView, SocialEditText
 [![](https://jitpack.io/v/n3o-d4rk3r/BangalMasterPack.svg)](https://jitpack.io/#n3o-d4rk3r/BangalMasterPack)
 
 ### Features:
