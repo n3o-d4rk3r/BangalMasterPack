@@ -8,6 +8,9 @@ android {
     namespace 'bd.com.bangal.masterpacklib'
     compileSdk 33
 
+        buildFeatures {
+        viewBinding true
+    }
     defaultConfig {
         minSdk 23
         targetSdk 33
@@ -45,7 +48,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'com.github.n3o-d4rk3r'
                 artifactId = 'masterpacklib'
-                version = '1.9.3'
+                version = '1.9.4'
                 artifact(bundleReleaseAar)
             }
         }
