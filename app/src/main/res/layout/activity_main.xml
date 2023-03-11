@@ -41,8 +41,8 @@
 
     <bd.com.bangal.masterpacklib.CameraVideoButton
         android:id="@+id/button"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:gravity="center"
         android:layout_below="@+id/test3"
         android:layout_marginBottom="16dp"
@@ -61,5 +61,28 @@
             android:text="Success"
             android:gravity="center"
             android:layout_below="@id/example"/>
+
+        <LinearLayout
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/successBtn"
+            android:orientation="vertical">
+
+            <bd.com.bangal.masterpacklib.tablayout.RoundTabLayout
+                android:id="@+id/circle_tab_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                app:accent="@color/colorPrimary"
+                app:withStroke="true"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager_circle"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#ffffff" />
+
+        </LinearLayout>
 
 </RelativeLayout>

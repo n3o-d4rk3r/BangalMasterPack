@@ -19,10 +19,8 @@ import bd.com.bangal.masterpacklib.R
 import java.util.*
 
 /**
- * Custom tab layout which can be used as a material
- * TabLayout alternative and consists basic functionality
- * which Google's TabLayout has.
- *
+ * Created by Md Kabir Hassan on 08/05/2020
+ * Software Engineer
  */
 class RoundTabLayout : HorizontalScrollView, ViewPager.OnPageChangeListener {
 
@@ -69,12 +67,12 @@ class RoundTabLayout : HorizontalScrollView, ViewPager.OnPageChangeListener {
         iconRes = typedArray.getDrawable(R.styleable.RoundTabLayout_src)
         typedArray.recycle()
 
-        try {
+        tabBackColor = try {
             val tabViewColor = background as ColorDrawable
-            tabBackColor = tabViewColor.color
+            tabViewColor.color
         } catch (exception: ClassCastException) {
             Log.d(TAG, "Tab layout background color Class Cast Exception")
-            tabBackColor = 0x00ffffff
+            0x00ffffff
         }
 
         isHorizontalScrollBarEnabled = false
@@ -107,10 +105,10 @@ class RoundTabLayout : HorizontalScrollView, ViewPager.OnPageChangeListener {
         this.viewPager = viewPager
         viewPager.setOnPageChangeListener(this)
 
-        for (i in 0..viewPager.adapter!!.count - 1) {
+        for (i in 0 until viewPager.adapter!!.count) {
             val tabText = viewPager.adapter!!.getPageTitle(i) as String
             val tab = RoundTab(context, cornerRadius, iconRes, hasStroke)
-                    .initTab(tabText.toUpperCase())
+                    .initTab(tabText.toUpperCase(Locale.ROOT))
 
             if (i == viewPager.currentItem) {
                 tab.setTabBackgroundColor(tabStrokeColor)
@@ -128,14 +126,6 @@ class RoundTabLayout : HorizontalScrollView, ViewPager.OnPageChangeListener {
             tabStrip?.addView(tab, layoutParams)
     }
 
-    /**
-     * Adds tab to child LinearLayout and forming tabs strip.
-     * @param tab user tab with custom text and colors.
-     */
-    private fun addTab(tab: RoundTab) {
-        tabs.add(tab)
-        tabStrip?.addView(tab, layoutParams)
-    }
     //</editor-fold>
 
     //<editor-fold desc="Layout drawing methods">
@@ -144,16 +134,15 @@ class RoundTabLayout : HorizontalScrollView, ViewPager.OnPageChangeListener {
         for (i in tabs.indices) {
             val tab = tabs[i]
             tab.setParentHeight(height)
-            val index = i
 
             tab.setOnClickListener {
-                if (index != clickedPosition && clickedPosition != -1) {
+                if (i != clickedPosition && clickedPosition != -1) {
                     animateFade(tabs[clickedPosition], ANIMATION_FADE_OUT)
                     tabs[clickedPosition].invalidate()
-                    clickedPosition = index
+                    clickedPosition = i
                     animateFade(tab, ANIMATION_FADE_IN)
                     tab.invalidate()
-                    viewPager?.currentItem = index
+                    viewPager?.currentItem = i
                 }
             }
 
@@ -247,11 +236,11 @@ class RoundTabLayout : HorizontalScrollView, ViewPager.OnPageChangeListener {
             smoothScrollTo(right, 0)
 
         if (position - 1 >= 0)
-            for (i in 0..position - 1 - 1)
+            for (i in 0 until position - 1)
                 previousPosition += tabs[i].width
 
         if (position + 1 < tabs.size)
-            for (i in 0..position + 1 - 1)
+            for (i in 0 until position + 1)
                 nextPosition += tabs[i].width
 
         val currentPosition = (0..position).sumOf { tabs[it].width }
@@ -278,11 +267,9 @@ class RoundTabLayout : HorizontalScrollView, ViewPager.OnPageChangeListener {
     }
     //</editor-fold>
 
-    fun getTab(position: Int) = tabs[position]
-
     companion object {
-        val ANIMATION_FADE_IN = 1
-        val ANIMATION_FADE_OUT = 0
+        const val ANIMATION_FADE_IN = 1
+        const val ANIMATION_FADE_OUT = 0
 
         val TAG: String = RoundTabLayout::class.java.simpleName
     }

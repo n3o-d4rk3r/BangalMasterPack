@@ -7,10 +7,15 @@ import android.view.View
 import android.widget.CompoundButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
+import androidx.viewpager.widget.ViewPager
 import bd.com.bangal.bangalmasterpack.databinding.ActivityMainBinding
 import bd.com.bangal.masterpacklib.CameraVideoButton
 import bd.com.bangal.masterpacklib.ReactionPopup
 import bd.com.bangal.masterpacklib.ReactionsConfigBuilder
+import bd.com.bangal.masterpacklib.tablayout.RoundTabLayout
 import bd.com.bangal.masterpacklib.toast.MotionToast
 import bd.com.bangal.masterpacklib.toast.MotionToastStyle
 
@@ -24,6 +29,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        val adapter = ViewAdapter(supportFragmentManager)
+
+        val viewPager = findViewById(R.id.view_pager_circle) as ViewPager
+        viewPager.adapter = adapter
+
+        val tabView = findViewById(R.id.circle_tab_view) as RoundTabLayout
+        tabView.setupWithViewPager(viewPager)
 
         binding.successBtn.setOnClickListener(this)
 
@@ -40,6 +53,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
             MotionToast.resetToastColors()
         }
     }
+
 
         override fun onClick(v: View?) {
         when (v!!.id) {
@@ -59,6 +73,31 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
 
         override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {
         setToastColors(isChecked)
+    }
+
+        private inner class ViewAdapter internal constructor(fm: FragmentManager) : FragmentPagerAdapter(fm) {
+
+        override fun getPageTitle(position: Int): CharSequence? {
+            when (position) {
+                0 -> return "All"
+                1 -> return "Articles"
+                2 -> return "Interviews"
+                3 -> return "News"
+                4 -> return "Events"
+                5 -> return "Links"
+                else -> return null
+            }
+        }
+
+        override fun getItem(position: Int): Fragment {
+            val fragment = HomeFragment()
+            val bundle = Bundle()
+            bundle.putCharSequence("title", getPageTitle(position))
+            fragment.arguments = bundle
+            return fragment
+        }
+
+        override fun getCount() = 6
     }
 
 }

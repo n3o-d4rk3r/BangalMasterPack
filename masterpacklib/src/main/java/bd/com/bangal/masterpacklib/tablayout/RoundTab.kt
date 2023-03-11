@@ -7,11 +7,8 @@ import android.view.View
 
 
 /**
- * Custom tab view that extends from simple View.
- * Exists as a part of RoundTabLayout and contains only basic
- * measurements, tab shape, text and icon drawing.
- *
- * Created by Ruslan Kishai on 1/1/2017.
+ * Created by Md Kabir Hassan on 08/05/2020
+ * Software Engineer
  */
 class RoundTab(context: Context) : View(context) {
 
@@ -98,7 +95,7 @@ class RoundTab(context: Context) : View(context) {
         this.tabText = tabText
 
         textPaint!!.textSize = DimensUtils.spToPx(context, 13).toFloat()
-        textPaint!!.style = Paint.Style.STROKE
+        textPaint!!.style = Paint.Style.FILL
         textPaint!!.color = tabTextColor
         textPaint!!.isAntiAlias = true
         textPaint!!.isFakeBoldText = true
