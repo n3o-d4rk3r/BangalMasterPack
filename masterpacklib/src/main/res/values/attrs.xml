@@ -132,5 +132,16 @@
     <declare-styleable name="SlideToActViewTheme">
         <attr name="slideToActViewStyle" format="reference" />
     </declare-styleable>
+
+     <declare-styleable name="RoundTabLayout">
+        <attr name="accent" format="color"/>
+        <attr name="corner" format="integer|string">
+            <flag name="rectangle" value="0"/>
+            <flag name="rounded" value="15"/>
+            <flag name="circle" value="50"/>
+        </attr>
+        <attr name="src" format="reference"/>
+        <attr name="withStroke" format="boolean"/>
+    </declare-styleable>
     
 </resources>

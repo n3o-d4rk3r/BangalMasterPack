@@ -48,7 +48,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'com.github.n3o-d4rk3r'
                 artifactId = 'masterpacklib'
-                version = '1.9.4'
+                version = '1.9.5'
                 artifact(bundleReleaseAar)
             }
         }
