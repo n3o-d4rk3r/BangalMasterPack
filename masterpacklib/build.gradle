@@ -38,8 +38,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    implementation 'org.jsoup:jsoup:1.15.3'
-    implementation 'com.squareup.picasso:picasso:2.8'
+    implementation 'org.jsoup:jsoup:1.11.3'
+    implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
 }
 afterEvaluate {
@@ -48,7 +48,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'com.github.n3o-d4rk3r'
                 artifactId = 'masterpacklib'
-                version = '1.9.6'
+                version = '1.9.7'
                 artifact(bundleReleaseAar)
             }
         }
