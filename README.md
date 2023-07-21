@@ -13,7 +13,6 @@
 <li>The controls are availabe in XML and programmatically</li>
 </ul>
 
-
   <p dir="auto">Step 1. Add it in your root <b>settings.gradle</b> at the end of repositories:</p>
 <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>
 allprojects {
